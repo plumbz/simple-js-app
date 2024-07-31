@@ -12,11 +12,6 @@ for (let i = 0; i < pokemonList.length; i++)
         // print name, height and note "wow, that's big!" including a new line
         document.write(pokemonList[i].name +" (height: " + pokemonList[i].height + ") wow, that's big!" + "<br>"); 
     }
-    // check if the pokemon is small
-    else if (pokemonList[i].height < 6)
-    {
-        document.write(pokemonList[i].name +" (height: " + pokemonList[i].height +")" + "<br>" );
-    }
     //otherwise it is normal
     else 
     {
