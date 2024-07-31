@@ -3,19 +3,21 @@ let pokemonList = [
     {name: "Charmander",height: 6,types: ["fire"]},
     {name: "Squirtle",height: 5,types: ["water"]}
 ];
-     
-for (let i = 0; i < pokemonList.length; i++)
+
+function myLoopFunction(pokemonList) 
 {
     // check if the pokemon is big 
-    if (pokemonList[i].height > 6)  
+    if (pokemonList.height > 6)  
     {
-        // print name, height and note "wow, that's big!" including a new line
-        document.write(pokemonList[i].name +" (height: " + pokemonList[i].height + ") wow, that's big!" + "<br>"); 
+        console.log(pokemonList.name +" (height: " + pokemonList.height + ") wow, that's big!" ); 
     }
     //otherwise it is normal
     else 
     {
         // print name and height including a new line
-        document.write(pokemonList[i].name +" (height: " + pokemonList[i].height + ") " + "<br>" );
+        console.log(pokemonList.name +" (height: " + pokemonList.height + ") " );
     }
 }
+
+pokemonList.forEach(myLoopFunction);
+     
