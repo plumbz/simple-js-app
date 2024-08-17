@@ -1,6 +1,5 @@
 .button-class 
 {
-  background-color: rgb(30, 148, 30);
   border: none;
   color: white;
   padding: 16px 32px;
@@ -11,14 +10,14 @@
   margin: 4px 2px;
   transition-duration: 0.5s;
   cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid rgb(30, 148, 30);
+  /* background-color: white; */
+  /* color: black; */
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .button-class:hover {
-  background-color: rgb(30, 148, 30);
-  color: white;
+  background-color: rgb(120, 150, 227);
+  /* color: white; */
 }
 
 
