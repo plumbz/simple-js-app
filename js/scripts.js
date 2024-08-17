@@ -27,8 +27,8 @@ let pokemonRepository = (function (){
       listPokemon.classList.add('list-group-item');
       button.innerText = pokemon.name;
       button.classList.add('btn', 'btn-primary', 'btn-lg', 'button-class');
-      button.dataset.bsToggle = 'modal'; // For data attributes, use camelCase
-      button.dataset.bsTarget = '#modal-container';  // Use camelCase for data attributes
+      button.setAttribute('data-toggle', 'modal'); // For data attributes, use camelCase
+      button.setAttribute('data-target', '#modal-container');  // Use camelCase for data attributes
       listPokemon.appendChild(button);
       pokemonList.appendChild (listPokemon);
       // Add event listener to the button
