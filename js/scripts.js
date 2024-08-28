@@ -17,7 +17,9 @@ let pokemonRepository = (function (){
   }}
     
   function getAll (){
-      return pokemonList;
+    console.error('this should trigger the error');
+    return pokemonList;
+
   }
 
   function addListItem (pokemon) {
@@ -71,6 +73,7 @@ let pokemonRepository = (function (){
   function showDetails(pokemon) {
       loadDetails(pokemon).then(function() {
         console.log(pokemon.name);
+        console.log(pokemon.imageUrl);
         showModal(pokemon);
       });
   }
