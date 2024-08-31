@@ -1,5 +1,6 @@
 .button-class 
 {
+  
   border: none;
   color: white;
   padding: 16px 32px;
@@ -13,6 +14,7 @@
   /* background-color: rgb(150, 209, 251); */
   /* color: black; */
   border: 1px solid rgb(0, 0, 0);
+
 }
 
 .button-class:hover {
