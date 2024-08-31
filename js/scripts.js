@@ -17,7 +17,6 @@ let pokemonRepository = (function (){
   }}
     
   function getAll (){
-    console.error('this should trigger the error');
     return pokemonList;
 
   }
