@@ -1,19 +1,19 @@
 let pokemonRepository = (function (){
 
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
   //let modalContainer = document.querySelector('#modal-container');
   // let modalContainer = document.getElementById('exampleModal')
 
   function add (pokemon){ 
     if (
-      typeof pokemon === "object" &&
-      "name" in pokemon &&
-      "detailsUrl" in pokemon
+      typeof pokemon === 'object' &&
+      'name' in pokemon &&
+      'detailsUrl' in pokemon
     ){
       pokemonList.push(pokemon);
       } else {
-      console.log("pokemon is not correct");
+      console.log('pokemon is not correct');
   }}
     
   function getAll (){
@@ -24,8 +24,8 @@ let pokemonRepository = (function (){
 
   function addListItem (pokemon) {
       let pokemonList = document.getElementById('pokemon-List');
-      let listPokemon= document.createElement("li");
-      let button = document.createElement("button");
+      let listPokemon= document.createElement('li');
+      let button = document.createElement('button');
       listPokemon.classList.add('list-group-item');
       button.innerText = pokemon.name;
       button.classList.add('btn', 'btn-primary', 'btn-lg', 'button-class');
@@ -34,7 +34,7 @@ let pokemonRepository = (function (){
       listPokemon.appendChild(button);
       pokemonList.appendChild (listPokemon);
       // Add event listener to the button
-      button.addEventListener("click", function() {
+      button.addEventListener('click', function() {
         showDetails (pokemon);
       });
   }
@@ -86,11 +86,11 @@ let pokemonRepository = (function (){
     modalBody.empty();
 
     // creating element for name in modal content
-    let nameElement =$("<h1>" + pokemon.name + "</h1>");
+    let nameElement =$('<h1>' + pokemon.name + '</h1>');
      //creating img in modal content
     let imageElementFront = $('<img class="modal-img" style=width:50%" alt="Pokemon picture">');
-    imageElementFront.attr("src", pokemon.imageUrl);
-    let heightElement = $("<p>" + "height : " + pokemon.height + "</p>")
+    imageElementFront.attr('src', pokemon.imageUrl);
+    let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>')
 
     modalTitle.append(nameElement);
     modalBody.append(imageElementFront);
