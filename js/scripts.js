@@ -2,8 +2,6 @@ let pokemonRepository = (function (){
 
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
-  //let modalContainer = document.querySelector('#modal-container');
-  // let modalContainer = document.getElementById('exampleModal')
 
   function add (pokemon){ 
     if (
@@ -61,14 +59,18 @@ let pokemonRepository = (function (){
         return response.json();
       }).then(function (details) {
         // Now we add the details to the item
-        pokemon.imageUrl = details.sprites.front_default;
+        pokemon.imageUrlFront = details.sprites.front_default;
+        pokemon.imageUrlBack = details.sprites.back_default;
         pokemon.height = details.height;
         pokemon.types = details.types;
       }).catch(function (e) {
         console.error(e);
       });
   }
-
+  // Get types
+  function getTypes(item) {
+    return [item.type.name].join(', ');
+  }
   function showDetails(pokemon) {
       loadDetails(pokemon).then(function() {
         console.log(pokemon.name);
@@ -87,13 +89,19 @@ let pokemonRepository = (function (){
     // creating element for name in modal content
     let nameElement =$('<h1>' + pokemon.name + '</h1>');
      //creating img in modal content
-    let imageElementFront = $('<img class="modal-img" style=width:50%" alt="Pokemon picture">');
-    imageElementFront.attr('src', pokemon.imageUrl);
-    let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>')
+    let imageElementFront = $('<img class="modal-img" style=width:70%" alt="Pokemon picture">');
+    imageElementFront.attr('src', pokemon.imageUrlFront);
+    let imageElementBack = $('<img class="modal-img" style=width:70%" alt="Pokemon picture">');
+    imageElementBack.attr('src', pokemon.imageUrlBack);
+    let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>');
+    let typesElement = $('<p>Types: ' + pokemon.types.map(getTypes) + '</p>'
+  );
 
     modalTitle.append(nameElement);
     modalBody.append(imageElementFront);
+    modalBody.append(imageElementBack);
     modalBody.append(heightElement);
+    modalBody.append(typesElement);
  
    
   }
