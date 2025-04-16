@@ -26,26 +26,26 @@ This project is a web-based Pokédex App, that fetches Pokémon-data from the Po
 To run the Pokédex App locally, follow these steps:
 
 1. **Clone the repository**:
- 
-
    ```bash
    git clone https://github.com/plumbz/simple-js-app.git
    cd pokedex
-   ```
+  ```
+
+  ```bash
 2. **Open the project**:
    - Simply open the `index.html` file in a browser.
- 
+   ```
+  ```bash
 3. **Optional (Local Development Server)**:
-
-   If you are using a development server like VS Code Live Server, run it to see real-time changes.
  
+   If you are using a development server like VS Code Live Server, run it to see real-time changes.
+  ```
 
 ## API Reference
 This project uses the **PokéAPI** to retrieve data about Pokémon:
 - [PokéAPI Documentation](https://pokeapi.co/)
  ---
 
----
 ## Dependencies
 - Pokémon API: https://pokeapi.co/api/v2/pokemon/?limit=20
 - jQuery: https://code.jquery.com/jquery-3.3.1.min.js
