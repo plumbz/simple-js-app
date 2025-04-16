@@ -30,16 +30,15 @@ To run the Pokédex App locally, follow these steps:
    git clone https://github.com/plumbz/simple-js-app.git
    cd pokedex
   ```
-
-  ```bash
+ 
 2. **Open the project**:
    - Simply open the `index.html` file in a browser.
-   ```
-  ```bash
+ 
+  
 3. **Optional (Local Development Server)**:
  
    If you are using a development server like VS Code Live Server, run it to see real-time changes.
-  ```
+
 
 ## API Reference
 This project uses the **PokéAPI** to retrieve data about Pokémon:
